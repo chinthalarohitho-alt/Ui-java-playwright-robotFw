@@ -32,31 +32,31 @@ public class BrowserKeywords {
         context.setDefaultTimeout(60000);
         page = context.newPage();
         page.navigate(url);
-        page.waitForSelector(SauceDemoLocators.USERNAME_INPUT);
+        page.waitForSelector(Locators.USERNAME_INPUT);
     }
 
     @RobotKeyword("I Enter Credentials")
     @ArgumentNames({ "username", "password" })
     public void iEnterCredentials(String username, String password) {
-        page.fill(SauceDemoLocators.USERNAME_INPUT, username);
-        page.fill(SauceDemoLocators.PASSWORD_INPUT, password);
+        page.fill(Locators.USERNAME_INPUT, username);
+        page.fill(Locators.PASSWORD_INPUT, password);
     }
 
     @RobotKeyword("I Click Login")
     public void iClickLogin() {
-        page.click(SauceDemoLocators.LOGIN_BUTTON);
+        page.click(Locators.LOGIN_BUTTON);
     }
 
     @RobotKeyword("The Dashboard Should Be Visible")
     public void theDashboardShouldBeVisible() {
-        if (!page.isVisible(SauceDemoLocators.INVENTORY_LIST)) {
+        if (!page.isVisible(Locators.INVENTORY_LIST)) {
             throw new RuntimeException("Dashboard not visible!");
         }
     }
 
     @RobotKeyword("The Dashboard Should not Be Visible")
     public void theDashboardShouldNotBeVisible() {
-        if (page.isVisible(SauceDemoLocators.INVENTORY_LIST)) {
+        if (page.isVisible(Locators.INVENTORY_LIST)) {
             throw new RuntimeException("Dashboard visible when it should not be!");
         }
     }
@@ -73,17 +73,17 @@ public class BrowserKeywords {
     @ArgumentNames({ "index" })
     public void iAddToCartForTheItem(int index) {
         // nth(index - 1) because index is 1-based from Robot but 0-based in Playwright
-        page.locator(SauceDemoLocators.INVENTORY_ITEM_BUTTON).nth(index - 1).click();
+        page.locator(Locators.INVENTORY_ITEM_BUTTON).nth(index - 1).click();
     }
 
     @RobotKeyword("I click on the cart icon")
     public void iClickOnTheCartIcon() {
-        page.click(SauceDemoLocators.SHOPPING_CART_LINK);
+        page.click(Locators.SHOPPING_CART_LINK);
     }
 
     @RobotKeyword("I should be able to remove the item from the cart")
     public void iShouldBeAbleToRemoveTheItemFromTheCart() {
-        page.getByText(SauceDemoLocators.REMOVE_BUTTON_TEXT).click();
+        page.getByText(Locators.REMOVE_BUTTON_TEXT).click();
     }
     // --- BDD Keywords (directly usable in .robot files) ---
 
