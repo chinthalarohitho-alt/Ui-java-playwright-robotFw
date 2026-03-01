@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generator="Robot 4.1 (Jython 2.7.2 on java25.0.1)" schemaversion="2" generated="20260227 18:11:39.995">
+<suite source="/Users/rohithkumar/Desktop/Project/playwright-robot-java/src/test/robotframework/acceptance" name="Acceptance" id="s1">
+<suite source="/Users/rohithkumar/Desktop/Project/playwright-robot-java/src/test/robotframework/acceptance/data_driven_login.robot" name="Data Driven Login" id="s1-s1">
+<test name="Standard Valid Login" id="s1-s1-t1">
+<kw type="SETUP" library="common_hooks" name="Setup Browser For SauceDemo">
+<kw library="com.example.BrowserKeywords" name="Open Browser To Page">
+<arg>https://www.saucedemo.com/</arg>
+<status endtime="20260227 18:11:44.605" starttime="20260227 18:11:40.132" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:44.608" starttime="20260227 18:11:40.130" status="PASS"/>
+</kw>
+<kw name="Login With Credentials">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw library="com.example.BrowserKeywords" name="I Enter Credentials">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status endtime="20260227 18:11:44.752" starttime="20260227 18:11:44.618" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="I Click Login">
+<status endtime="20260227 18:11:44.825" starttime="20260227 18:11:44.752" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="The Dashboard Should Be Visible">
+<status endtime="20260227 18:11:44.835" starttime="20260227 18:11:44.828" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:44.837" starttime="20260227 18:11:44.613" status="PASS"/>
+</kw>
+<kw type="TEARDOWN" library="common_hooks" name="Teardown Browser">
+<kw library="com.example.BrowserKeywords" name="Close Simple Browser">
+<status endtime="20260227 18:11:44.871" starttime="20260227 18:11:44.841" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:44.872" starttime="20260227 18:11:44.838" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:44.872" starttime="20260227 18:11:40.129" status="PASS"/>
+</test>
+<test name="Invalid Login Scenarios" id="s1-s1-t2">
+<kw type="SETUP" library="common_hooks" name="Setup Browser For SauceDemo">
+<kw library="com.example.BrowserKeywords" name="Open Browser To Page">
+<arg>https://www.saucedemo.com/</arg>
+<status endtime="20260227 18:11:46.156" starttime="20260227 18:11:44.876" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:46.165" starttime="20260227 18:11:44.876" status="PASS"/>
+</kw>
+<kw name="Login With invalid Credentials">
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<kw library="com.example.BrowserKeywords" name="I Enter Credentials">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status endtime="20260227 18:11:46.265" starttime="20260227 18:11:46.175" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="I Click Login">
+<status endtime="20260227 18:11:46.316" starttime="20260227 18:11:46.269" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="The Dashboard Should Not Be Visible">
+<status endtime="20260227 18:11:46.319" starttime="20260227 18:11:46.317" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:46.320" starttime="20260227 18:11:46.167" status="PASS"/>
+</kw>
+<kw name="Login With invalid Credentials">
+<arg>standard_user</arg>
+<arg>wrong_password</arg>
+<kw library="com.example.BrowserKeywords" name="I Enter Credentials">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status endtime="20260227 18:11:46.340" starttime="20260227 18:11:46.330" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="I Click Login">
+<status endtime="20260227 18:11:46.375" starttime="20260227 18:11:46.340" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="The Dashboard Should Not Be Visible">
+<status endtime="20260227 18:11:46.377" starttime="20260227 18:11:46.375" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:46.377" starttime="20260227 18:11:46.322" status="PASS"/>
+</kw>
+<kw type="TEARDOWN" library="common_hooks" name="Teardown Browser">
+<kw library="com.example.BrowserKeywords" name="Close Simple Browser">
+<status endtime="20260227 18:11:46.384" starttime="20260227 18:11:46.379" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:46.385" starttime="20260227 18:11:46.378" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:46.385" starttime="20260227 18:11:44.874" status="PASS"/>
+</test>
+<status endtime="20260227 18:11:46.391" starttime="20260227 18:11:40.093" status="PASS"/>
+</suite>
+<suite source="/Users/rohithkumar/Desktop/Project/playwright-robot-java/src/test/robotframework/acceptance/login.robot" name="Login" id="s1-s2">
+<test name="Login To SauceDemo Website" id="s1-s2-t1">
+<kw type="SETUP" library="common_hooks" name="Setup Browser For SauceDemo">
+<kw library="com.example.BrowserKeywords" name="Open Browser To Page">
+<arg>https://www.saucedemo.com/</arg>
+<status endtime="20260227 18:11:47.335" starttime="20260227 18:11:46.407" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:47.342" starttime="20260227 18:11:46.407" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="Given I Login With Valid Credentials">
+<status endtime="20260227 18:11:48.106" starttime="20260227 18:11:47.356" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="Then The Dashboard Is Displayed">
+<status endtime="20260227 18:11:48.131" starttime="20260227 18:11:48.111" status="PASS"/>
+</kw>
+<kw type="TEARDOWN" library="common_hooks" name="Teardown Browser">
+<kw library="com.example.BrowserKeywords" name="Close Simple Browser">
+<status endtime="20260227 18:11:48.204" starttime="20260227 18:11:48.153" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:48.208" starttime="20260227 18:11:48.143" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:48.209" starttime="20260227 18:11:46.406" status="PASS"/>
+</test>
+<test name="Add To Cart and remove it successfully" id="s1-s2-t2">
+<kw type="SETUP" library="common_hooks" name="Setup Browser For SauceDemo">
+<kw library="com.example.BrowserKeywords" name="Open Browser To Page">
+<arg>https://www.saucedemo.com/</arg>
+<status endtime="20260227 18:11:50.603" starttime="20260227 18:11:48.222" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:50.606" starttime="20260227 18:11:48.218" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="Given I Login With Valid Credentials">
+<status endtime="20260227 18:11:51.173" starttime="20260227 18:11:50.609" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="Then The Dashboard Is Displayed">
+<status endtime="20260227 18:11:51.180" starttime="20260227 18:11:51.175" status="PASS"/>
+</kw>
+<kw sourcename="I Add To Cart for the ${index} item" name="When I Add To Cart for the 1 item">
+<kw library="com.example.BrowserKeywords" name="I Add To Cart For The Item">
+<arg>${index}</arg>
+<status endtime="20260227 18:11:51.274" starttime="20260227 18:11:51.190" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:51.274" starttime="20260227 18:11:51.189" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="And I click on the cart icon">
+<status endtime="20260227 18:11:51.331" starttime="20260227 18:11:51.275" status="PASS"/>
+</kw>
+<kw library="com.example.BrowserKeywords" name="Then I should be able to remove the item from the cart">
+<status endtime="20260227 18:11:51.374" starttime="20260227 18:11:51.332" status="PASS"/>
+</kw>
+<kw type="TEARDOWN" library="common_hooks" name="Teardown Browser">
+<kw library="com.example.BrowserKeywords" name="Close Simple Browser">
+<status endtime="20260227 18:11:51.422" starttime="20260227 18:11:51.375" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:51.423" starttime="20260227 18:11:51.374" status="PASS"/>
+</kw>
+<status endtime="20260227 18:11:51.423" starttime="20260227 18:11:48.213" status="PASS"/>
+</test>
+<status endtime="20260227 18:11:51.425" starttime="20260227 18:11:46.395" status="PASS"/>
+</suite>
+<status endtime="20260227 18:11:51.432" starttime="20260227 18:11:40.004" status="PASS"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" skip="0" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" skip="0" fail="0" name="Acceptance" id="s1">Acceptance</stat>
+<stat pass="2" skip="0" fail="0" name="Data Driven Login" id="s1-s1">Acceptance.Data Driven Login</stat>
+<stat pass="2" skip="0" fail="0" name="Login" id="s1-s2">Acceptance.Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="WARN" timestamp="20260227 18:11:39.933">Command line option --xunitskipnoncritical has been deprecated and has no effect.</msg>
+</errors>
+</robot>

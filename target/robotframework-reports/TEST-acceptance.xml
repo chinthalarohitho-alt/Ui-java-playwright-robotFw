@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0" skipped="0" tests="4" name="Acceptance" time="11.428" errors="0">
+<testcase classname="Acceptance.Data Driven Login" name="Standard Valid Login" time="4.743">
+</testcase>
+<testcase classname="Acceptance.Data Driven Login" name="Invalid Login Scenarios" time="1.511">
+</testcase>
+<testcase classname="Acceptance.Login" name="Login To SauceDemo Website" time="1.803">
+</testcase>
+<testcase classname="Acceptance.Login" name="Add To Cart and remove it successfully" time="3.210">
+</testcase>
+</testsuite>
