@@ -9,6 +9,7 @@ I Add To Cart for the ${index} item
 
 *** Test Cases ***
 Login To SauceDemo Website
+    [tags]  smoke
     Given I Login With Valid Credentials
     Then The Dashboard Is Displayed
 
